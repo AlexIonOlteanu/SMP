@@ -89,7 +89,7 @@ u8: mov ah, 0ch
     cmp cx, 159
     jbe u8          
     
-     ;efect 3D
+    ;efect 3D
     mov cx, 159
     mov dx, 116
     mov al, 15
@@ -98,7 +98,7 @@ u9: mov ah, 0ch
     dec dx
     cmp dx, 91
     jae u9     
-     ;efect 3D acoperisi
+    ;efect 3D acoperisi
     mov cx, 159
     mov dx, 91
     mov al, 15
@@ -119,7 +119,7 @@ u11: mov ah, 0ch
     cmp dx, 109
     ja u11
     
-     ;afisare usa
+    ;afisare usa
     mov cx, 130
     mov dx, 100+h
     mov al, 15
@@ -134,7 +134,7 @@ u12: mov ah, 0ch
     mov cx, 130
     mov dx, 109
     mov al, 15
-    u131: mov ah, 0ch
+u131: mov ah, 0ch
     int 10h
     dec cx 
     cmp cx, 120
@@ -145,7 +145,7 @@ u12: mov ah, 0ch
     mov dx, 105
     mov al, 15
 
-    u151: mov ah, 0ch
+u151: mov ah, 0ch
     int 10h
     dec cx 
     cmp cx, 135
@@ -155,7 +155,7 @@ u12: mov ah, 0ch
     mov dx, 115
     mov al, 15
 
-    u152: mov ah, 0ch
+u152: mov ah, 0ch
     int 10h
     dec cx 
     cmp cx, 135
@@ -166,7 +166,7 @@ u12: mov ah, 0ch
     mov dx, 115
     mov al, 15
 
-    u153: mov ah, 0ch
+u153: mov ah, 0ch
     int 10h
     dec dx 
     cmp dx, 105
@@ -177,7 +177,7 @@ u12: mov ah, 0ch
     mov dx, 115
     mov al, 15
 
-    u154: mov ah, 0ch
+u154: mov ah, 0ch
     int 10h
     dec dx 
     cmp dx, 105
@@ -188,7 +188,7 @@ u12: mov ah, 0ch
     mov dx, 105
     mov al, 15
     
-    u171: mov ah, 0ch
+u171: mov ah, 0ch
     int 10h
     dec cx 
     cmp cx, 105
@@ -200,7 +200,7 @@ u12: mov ah, 0ch
     mov dx, 115
     mov al, 15
     
-    u172: mov ah, 0ch
+u172: mov ah, 0ch
     int 10h
     dec cx 
     cmp cx, 105
@@ -212,7 +212,7 @@ u12: mov ah, 0ch
     mov dx, 115
     mov al, 15
     
-    u173: mov ah, 0ch
+u173: mov ah, 0ch
     int 10h
     dec dx 
     cmp dx, 105
@@ -224,7 +224,7 @@ u12: mov ah, 0ch
     mov dx, 115
     mov al, 15
     
-    u174: mov ah, 0ch
+u174: mov ah, 0ch
     int 10h
     dec dx 
     cmp dx, 105
@@ -248,7 +248,7 @@ je strada
 PRINTN 'Introdu 1,2 sau 3!'
 jmp sfarsit 
 
-; etapa de hasurare
+        ; etapa de hasurare
 hasurare:   
 
 ;hasurare acoperisi
@@ -258,12 +258,12 @@ hasurare:
     mov al, 15 
     
 u51:    
-u5: mov ah, 0ch
-    int 10h
-    dec dx
-    dec cx
-    cmp cx, 125
-    jae u5 
+    u5: mov ah, 0ch
+        int 10h
+        dec dx
+        dec cx
+        cmp cx, 125
+        jae u5 
     mov dx,100
     dec bx
     mov cx, bx
@@ -273,18 +273,18 @@ u5: mov ah, 0ch
                            
                            
   ;hasurare acoperisi                         
-   mov cx, 101
+    mov cx, 101
     mov dx, 100
     mov bx, 101
     mov al, 15 
     
 u61:    
-u6: mov ah, 0ch
-    int 10h
-    dec dx
-    inc cx
-    cmp cx, 125
-    jbe u6
+    u6: mov ah, 0ch
+        int 10h
+        dec dx
+        inc cx
+        cmp cx, 125
+        jbe u6
     mov dx,100
     inc bx
     mov cx, bx
@@ -300,10 +300,10 @@ u6: mov ah, 0ch
 u14:    
  
     u13: mov ah, 0ch
-    int 10h
-    dec cx 
-    cmp cx, 120
-    ja u13         
+        int 10h
+        dec cx 
+        cmp cx, 120
+        ja u13         
     mov cx, 130
     inc dx
     cmp dx,125
@@ -315,28 +315,26 @@ u14:
     mov al, 15
 
 u16:    
- 
     u15: mov ah, 0ch
-    int 10h
-    dec cx 
-    cmp cx, 135
-    ja u15         
+        int 10h
+        dec cx 
+        cmp cx, 135
+        ja u15         
     mov cx, 145
     inc dx
     cmp dx,115
     jb u16     
-     ;hasurare fereastra stanga
+    ;hasurare fereastra stanga
     mov cx, 114
     mov dx, 106
     mov al, 15
 
 u18:    
- 
     u17: mov ah, 0ch
-    int 10h
-    dec cx 
-    cmp cx, 105
-    ja u17         
+        int 10h
+        dec cx 
+        cmp cx, 105
+        ja u17         
     mov cx, 115
     inc dx
     cmp dx,115
@@ -354,20 +352,15 @@ scari:
     mov al, 15
 
 u19:  
-        
-      
- 
     u20:  
-    
-    mov al, 7
-    mov ah, 0eh
-
-    int 10h
-     mov ah, 0ch
-    int 10h
-    inc cx 
-    cmp cx, bx
-    jbe u20         
+        mov al, 7
+        mov ah, 0eh
+        int 10h
+        mov ah, 0ch
+        int 10h
+        inc cx 
+        cmp cx, bx
+        jbe u20         
     sub bx, 2
     mov cx, bx
     sub cx, 10
@@ -377,6 +370,7 @@ u19:
            
            
  jmp sfarsit
+    
     ;afisare strada
  strada: 
     ;afisare linie continua     
@@ -398,13 +392,12 @@ u19:
     mov al, 15
 
 u23:    
- 
     u22:
-     mov ah, 0ch
-    int 10h
-    inc cx 
-    cmp cx, bx
-    jbe u22         
+        mov ah, 0ch
+        int 10h
+        inc cx 
+        cmp cx, bx
+        jbe u22         
     add bx, 40
     add cx, 25
     cmp cx,300
